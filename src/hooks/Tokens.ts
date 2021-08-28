@@ -127,18 +127,16 @@ export function useIsUserAddedToken(currency: Currency | undefined | null): bool
 const BYTES32_REGEX = /^0x[a-fA-F0-9]{64}$/
 
 function parseStringOrBytes32(str: string | undefined, bytes32: string | undefined, defaultValue: string): string {
-  let x = "s";
-if(str && str.length >0){
-  x=  str;
-}else if(bytes32 && BYTES32_REGEX.test(bytes32) && arrayify(bytes32)[31] === 0)
-  {
-     x= parseBytes32String(bytes32)
+  let x = 's'
+  if (str && str.length > 0) {
+    x = str
+  } else if (bytes32 && BYTES32_REGEX.test(bytes32) && arrayify(bytes32)[31] === 0) {
+    x = parseBytes32String(bytes32)
   } else {
-     x = defaultValue
+    x = defaultValue
   }
 
-
-  return x;
+  return x
 }
 
 // undefined if invalid or does not exist

@@ -29,7 +29,7 @@ const ApyButton: React.FC<ApyButtonProps> = ({
       tokenAddresses={tokenAddresses}
       cakePrice={cakePrice}
       apy={apy}
-      onDismiss={()=>null}
+      onDismiss={() => null}
     />,
   )
 

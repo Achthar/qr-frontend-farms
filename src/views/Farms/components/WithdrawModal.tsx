@@ -17,7 +17,9 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   const [val, setVal] = useState('')
   const { toastSuccess, toastError } = useToast()
   const [pendingTx, setPendingTx] = useState(false)
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const fullBalance = useMemo(() => {
     return getFullDisplayBalance(max)
   }, [max])

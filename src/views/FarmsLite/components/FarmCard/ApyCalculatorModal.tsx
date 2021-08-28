@@ -41,7 +41,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   tokenAddresses,
   cakePrice,
   apy,
-}:ApyCalculatorModalProps) => {
+}: ApyCalculatorModalProps) => {
   const TranslateString = useI18n()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAddresses, quoteTokenSymbol, tokenAddresses })
   const farmApy = apy.times(new BigNumber(100)).toNumber()

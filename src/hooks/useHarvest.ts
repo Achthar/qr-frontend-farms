@@ -12,8 +12,8 @@ export const useHarvest = (farmPid: number) => {
 
   const handleHarvest = useCallback(async () => {
     const txHash = await harvest(masterChefContract, farmPid, account)
-    const pids = null;
-    dispatch(fetchFarmUserDataAsync({account, pids}))
+    const pids = null
+    dispatch(fetchFarmUserDataAsync({ account, pids }))
     return txHash
   }, [account, dispatch, farmPid, masterChefContract])
 

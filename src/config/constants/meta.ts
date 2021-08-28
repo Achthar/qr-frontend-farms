@@ -59,9 +59,6 @@ export const getCustomMeta = (path: string, t: ContextApi['t']): PageMeta => {
   }
 }
 
-
-
-
 export const getCustomMetaDefault = (path: string): PageMeta => {
   switch (path) {
     case '/':
@@ -112,4 +109,3 @@ export const getCustomMetaDefault = (path: string): PageMeta => {
       return null
   }
 }
-

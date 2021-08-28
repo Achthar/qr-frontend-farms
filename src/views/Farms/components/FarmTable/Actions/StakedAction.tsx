@@ -45,7 +45,9 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   userDataReady,
   displayApr,
 }) => {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const { account } = useWeb3React()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { allowance, tokenBalance, stakedBalance } = useFarmUser(pid)

@@ -25,7 +25,9 @@ const ArrowIcon = styled(ChevronDownIcon)<{ toggled: boolean }>`
 `
 
 const Details: React.FC<DetailsProps> = ({ actionPanelToggled }) => {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const { isDesktop } = useMatchBreakpoints()
 
   return (

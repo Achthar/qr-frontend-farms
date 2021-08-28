@@ -93,7 +93,7 @@ function TransactionSubmittedContent({
               onClick={() => registerToken(token.address, token.symbol, token.decimals)}
             >
               <RowFixed>
-                `Add ${ currencyToAdd.symbol } to Metamask` 
+                `Add ${currencyToAdd.symbol} to Metamask`
                 <MetamaskIcon width="16px" ml="6px" />
               </RowFixed>
             </Button>

@@ -29,20 +29,20 @@ const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const farms = useFarms();
-  const eggPrice = usePriceCakeBusd();
-  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
-  const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = eggPrice.times(circSupply);
+  const farms = useFarms()
+  const eggPrice = usePriceCakeBusd()
+  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
+  const cakeSupply = getBalanceNumber(circSupply)
+  const marketCap = eggPrice.times(circSupply)
 
-  const eggPerBlock = 0;
+  const eggPerBlock = 0
   // if(farms && farms[0] && farms[0].dual.rewardPerBlock){
   //  eggPerBlock = new BigNumber(farms[0].dual.rewardPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   // }
 
-  const headerCol = 'rgba(0, 32, 96, 1)';
-  const bodyCol = 'black';
-  const number = 'rgba(142, 0, 0, 1)';
+  const headerCol = 'rgba(0, 32, 96, 1)'
+  const bodyCol = 'black'
+  const number = 'rgba(142, 0, 0, 1)'
   return (
     <StyledQTStats>
       <CardBody>
@@ -50,24 +50,36 @@ const CakeStats = () => {
           Quant Token Stats
         </Heading>
         <Row>
-          <Text fontSize="14px" color={bodyCol}>Market Cap</Text>
+          <Text fontSize="14px" color={bodyCol}>
+            Market Cap
+          </Text>
           <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px" color={bodyCol}>Total Minted</Text>
+          <Text fontSize="14px" color={bodyCol}>
+            Total Minted
+          </Text>
           {totalSupply && <CardValue fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px" color={bodyCol}>Total Burned</Text>
+          <Text fontSize="14px" color={bodyCol}>
+            Total Burned
+          </Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px" color={bodyCol}>Circulating Supply</Text>
+          <Text fontSize="14px" color={bodyCol}>
+            Circulating Supply
+          </Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px" color={bodyCol} >New QT/block</Text>
-          <Text color={number} bold fontSize="14px">{eggPerBlock}</Text>
+          <Text fontSize="14px" color={bodyCol}>
+            New QT/block
+          </Text>
+          <Text color={number} bold fontSize="14px">
+            {eggPerBlock}
+          </Text>
         </Row>
       </CardBody>
     </StyledQTStats>

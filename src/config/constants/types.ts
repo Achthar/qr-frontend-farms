@@ -43,15 +43,15 @@ export interface Ifo {
   [PoolIds.poolBasic]?: IfoPoolInfo
   [PoolIds.poolUnlimited]: IfoPoolInfo
   subTitle?: string
-    description?: string
-    launchDate?: string
-    launchTime?: string
-    saleAmount?:string
-    raiseAmount?:string
-    cakeToBurn?:string
-    projectSiteUrl?: string
-    currencyAddress?:string
-    tokenDecimals?:number
+  description?: string
+  launchDate?: string
+  launchTime?: string
+  saleAmount?: string
+  raiseAmount?: string
+  cakeToBurn?: string
+  projectSiteUrl?: string
+  currencyAddress?: string
+  tokenDecimals?: number
 }
 
 export enum PoolCategory {
@@ -244,7 +244,6 @@ export interface ConnectedBidder {
   isWhitelisted: boolean
   bidderData?: Bidder
 }
-
 
 export enum QuoteToken {
   'BNB' = 'BNB',

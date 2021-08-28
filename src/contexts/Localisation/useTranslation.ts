@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { LanguageContext } from './Provider'
-import {TranslationsContext} from './translationsContext'
+import { TranslationsContext } from './translationsContext'
 
 const useTranslation = () => {
   const languageContext = useContext(TranslationsContext)

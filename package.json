@@ -9,7 +9,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "compile": "tsc"
   },
   "husky": {
     "hooks": {}
@@ -33,7 +34,6 @@
     "@pancakeswap-libs/uikit": "goosedefi/goose-uikit",
     "@pancakeswap/sdk": "^2.3.2",
     "@pancakeswap/uikit": "^0.49.1",
-    "@pantherswap-libs/uikit": "^0.1.1",
     "@reduxjs/toolkit": "^1.5.0",
     "@storybook/react": "^6.0.0",
     "@types/react": "^17.0.0",

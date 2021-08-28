@@ -41,7 +41,9 @@ interface PositionCardProps extends CardProps {
 export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCardProps) {
   const { account } = useActiveWeb3React()
 
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   const currency0 = showUnwrapped ? pair.token0 : unwrappedToken(pair.token0)
   const currency1 = showUnwrapped ? pair.token1 : unwrappedToken(pair.token1)
@@ -208,7 +210,7 @@ export default function FullPositionCard({ pair, ...props }: PositionCardProps) 
 
           <FixedHeightRow>
             <RowFixed>
-              <CurrencyLogo size="20px" currency={currency1} style={{ padding: '1px' }}/>
+              <CurrencyLogo size="20px" currency={currency1} style={{ padding: '1px' }} />
               <Text color="textSubtle" ml="4px">
                 Pooled {currency1.symbol}
               </Text>

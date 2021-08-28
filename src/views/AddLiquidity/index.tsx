@@ -44,7 +44,9 @@ export default function AddLiquidity({
   history,
 }: RouteComponentProps<{ currencyIdA?: string; currencyIdB?: string }>) {
   const { account, chainId, library } = useActiveWeb3React()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const gasPrice = useGasPrice()
 
   const currencyA = useCurrency(currencyIdA)
@@ -226,7 +228,11 @@ export default function AddLiquidity({
           </Text>
         </Row>
         <Text small textAlign="left" my="24px">
-          {t(`Output is estimated. If the price changes by more than ${allowedSlippage / 100}% your transaction will revert.`)}
+          {t(
+            `Output is estimated. If the price changes by more than ${
+              allowedSlippage / 100
+            }% your transaction will revert.`,
+          )}
         </Text>
       </AutoColumn>
     )
@@ -245,7 +251,11 @@ export default function AddLiquidity({
     )
   }
 
-  const pendingText = t(`Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? ''} ${currencies[Field.CURRENCY_A]?.symbol ?? ''} and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? ''} ${currencies[Field.CURRENCY_B]?.symbol ?? ''}`)
+  const pendingText = t(
+    `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) ?? ''} ${
+      currencies[Field.CURRENCY_A]?.symbol ?? ''
+    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) ?? ''} ${currencies[Field.CURRENCY_B]?.symbol ?? ''}`,
+  )
 
   const handleCurrencyASelect = useCallback(
     (currencyA_: Currency) => {
@@ -337,12 +347,12 @@ export default function AddLiquidity({
               id="add-liquidity-input-tokena"
               showCommonBases
               // error fix defaults
-              disableCurrencySelect = {false}
-              hideBalance = {false}
-              pair = {null} // used for double token logo
-              hideInput = {false}
+              disableCurrencySelect={false}
+              hideBalance={false}
+              pair={null} // used for double token logo
+              hideInput={false}
               otherCurrency={null}
-              label=''
+              label=""
             />
             <ColumnCenter>
               <AddIcon width="16px" />
@@ -359,12 +369,12 @@ export default function AddLiquidity({
               id="add-liquidity-input-tokenb"
               showCommonBases
               // error fix defaults
-              disableCurrencySelect = {false}
-              hideBalance = {false}
-              pair = {null} // used for double token logo
-              hideInput = {false}
+              disableCurrencySelect={false}
+              hideBalance={false}
+              pair={null} // used for double token logo
+              hideInput={false}
               otherCurrency={null}
-              label=''
+              label=""
             />
             {currencies[Field.CURRENCY_A] && currencies[Field.CURRENCY_B] && pairState !== PairState.INVALID && (
               <>
@@ -407,9 +417,9 @@ export default function AddLiquidity({
                           width={approvalB !== ApprovalState.APPROVED ? '48%' : '100%'}
                         >
                           {approvalA === ApprovalState.PENDING ? (
-                            <Dots>{t(`Enabling ${currencies[Field.CURRENCY_A]?.symbol }`)}</Dots>
+                            <Dots>{t(`Enabling ${currencies[Field.CURRENCY_A]?.symbol}`)}</Dots>
                           ) : (
-                            t(`Enable ${currencies[Field.CURRENCY_A]?.symbol }`)
+                            t(`Enable ${currencies[Field.CURRENCY_A]?.symbol}`)
                           )}
                         </Button>
                       )}
@@ -420,9 +430,9 @@ export default function AddLiquidity({
                           width={approvalA !== ApprovalState.APPROVED ? '48%' : '100%'}
                         >
                           {approvalB === ApprovalState.PENDING ? (
-                            <Dots>{t(`Enabling ${currencies[Field.CURRENCY_B]?.symbol }`)}</Dots>
+                            <Dots>{t(`Enabling ${currencies[Field.CURRENCY_B]?.symbol}`)}</Dots>
                           ) : (
-                            t(`Enable ${currencies[Field.CURRENCY_B]?.symbol }`)
+                            t(`Enable ${currencies[Field.CURRENCY_B]?.symbol}`)
                           )}
                         </Button>
                       )}

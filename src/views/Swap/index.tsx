@@ -305,11 +305,11 @@ export default function Swap({ history }: RouteComponentProps) {
   return (
     <Page>
       <AppBody>
-        <AppHeader title='Exchange' subtitle='Trade tokens in an instant' />
+        <AppHeader title="Exchange" subtitle="Trade tokens in an instant" />
         <Wrapper id="swap-page">
           <AutoColumn gap="md">
             <CurrencyInputPanel
-              label={independentField === Field.OUTPUT && !showWrap && trade ? 'From (estimated)': 'From'}
+              label={independentField === Field.OUTPUT && !showWrap && trade ? 'From (estimated)' : 'From'}
               value={formattedAmounts[Field.INPUT]}
               showMaxButton={!atMaxAmountInput}
               currency={currencies[Field.INPUT]}
@@ -319,10 +319,10 @@ export default function Swap({ history }: RouteComponentProps) {
               otherCurrency={currencies[Field.OUTPUT]}
               id="swap-currency-input"
               // edit error out
-              disableCurrencySelect = {false}
-              hideBalance = {false}
-              pair = {null} // used for double token logo
-              hideInput = {false}
+              disableCurrencySelect={false}
+              hideBalance={false}
+              pair={null} // used for double token logo
+              hideInput={false}
               showCommonBases
             />
             <AutoColumn justify="space-between">
@@ -354,12 +354,12 @@ export default function Swap({ history }: RouteComponentProps) {
               otherCurrency={currencies[Field.INPUT]}
               id="swap-currency-output"
               // edit error out
-              disableCurrencySelect = {false}
-              hideBalance = {false}
-              pair = {null} // used for double token logo
-              hideInput = {false}
+              disableCurrencySelect={false}
+              hideBalance={false}
+              pair={null} // used for double token logo
+              hideInput={false}
               showCommonBases
-              onMax={()=>null}
+              onMax={() => null}
             />
 
             {isExpertMode && recipient !== null && !showWrap ? (
@@ -432,12 +432,12 @@ export default function Swap({ history }: RouteComponentProps) {
                 >
                   {approval === ApprovalState.PENDING ? (
                     <AutoRow gap="6px" justify="center" size="10px">
-                      Enabling <CircleLoader stroke="white" size="15px"/>
+                      Enabling <CircleLoader stroke="white" size="15px" />
                     </AutoRow>
                   ) : approvalSubmitted && approval === ApprovalState.APPROVED ? (
                     'Enabled'
                   ) : (
-                    `Enable ${currencies[Field.INPUT]?.symbol ?? '' }`
+                    `Enable ${currencies[Field.INPUT]?.symbol ?? ''}`
                   )}
                 </Button>
                 <Button

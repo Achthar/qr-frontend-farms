@@ -16,11 +16,11 @@ const StyledTotalValueLockedCard = styled(Card)`
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   // const data = useGetStats()
-  const totalValue = useTotalValue();
+  const totalValue = useTotalValue()
   // const tvl = totalValue.toFixed(2);
 
-  const textCol = 'rgba(0, 32, 96, 1)';
-  const number = 'rgba(142, 0, 0, 1)';
+  const textCol = 'rgba(0, 32, 96, 1)'
+  const number = 'rgba(142, 0, 0, 1)'
   return (
     <StyledTotalValueLockedCard>
       <CardBody color={number}>
@@ -30,7 +30,7 @@ const TotalValueLockedCard = () => {
         <>
           {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
           {/* <Heading size="xl"> */}
-            <CardValue value={totalValue.toNumber()} prefix="$" decimals={0} />
+          <CardValue value={totalValue.toNumber()} prefix="$" decimals={0} />
           {/* </Heading> */}
           <Text color={textCol}>{TranslateString(999, 'Across all Farms and Pools')}</Text>
         </>

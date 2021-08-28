@@ -52,7 +52,7 @@ const Cards = styled(BaseLayout)`
     }
   }
 `
-const textCol = 'rgba(0, 32, 96, 1)';
+const textCol = 'rgba(0, 32, 96, 1)'
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
       <div>
         <Cards>
           <FarmStakingCard />
-          <TwitterCard/>
+          <TwitterCard />
           <CakeStats />
           <TotalValueLockedCard />
         </Cards>

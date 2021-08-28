@@ -33,5 +33,5 @@ export const DEFAULT_GAS_LIMIT = 200000
 export const AUCTION_BIDDERS_TO_FETCH = 500
 export const RECLAIM_AUCTIONS_TO_FETCH = 500
 export const AUCTION_WHITELISTED_BIDDERS_TO_FETCH = 500
-export const INITIAL_ALLOWED_SLIPPAGE = 0.01;
-export const CAKE_POOL_PID = '';
+export const INITIAL_ALLOWED_SLIPPAGE = 0.01
+export const CAKE_POOL_PID = ''

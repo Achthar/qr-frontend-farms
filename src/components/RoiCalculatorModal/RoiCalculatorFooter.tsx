@@ -56,7 +56,8 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
   } = useTooltip(
     <>
       <Text>
-        The Multiplier represents the proportion of CAKE rewards each farm receives, as a proportion of the CAKE produced each block.
+        The Multiplier represents the proportion of CAKE rewards each farm receives, as a proportion of the CAKE
+        produced each block.
       </Text>
       <Text my="24px">
         For example, if a 1x farm received 1 CAKE per block, a 40x farm would receive 40 CAKE per block.
@@ -94,7 +95,7 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
               {apr.toFixed(2)}%
             </Text>
             <Text color="textSubtle" small>
-              `APY (${ autoCompoundFrequency > 0 ? autoCompoundFrequency : 1}x daily compound)`
+              `APY (${autoCompoundFrequency > 0 ? autoCompoundFrequency : 1}x daily compound)`
             </Text>
             <Text small textAlign="right">
               {apy}%
@@ -131,7 +132,8 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
             )}
             <li>
               <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
-                All figures are estimates provided for your convenience only, and by no means represent guaranteed returns.
+                All figures are estimates provided for your convenience only, and by no means represent guaranteed
+                returns.
               </Text>
             </li>
             {performanceFee > 0 && (

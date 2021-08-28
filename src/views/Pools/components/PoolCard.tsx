@@ -31,7 +31,6 @@ interface PoolWithApy extends Pool {
   stakingTokenAddress?: any
   projectLink?: any
   tokenDecimals?: any
-
 }
 
 interface HarvestProps {
@@ -63,7 +62,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const stakingTokenContract = useERC20(stakingTokenAddress)
   const { account } = useWallet()
   const block = useBlock()
-  const  onApprove  = null // useSousApprove(stakingTokenContract, sousId)
+  const onApprove = null // useSousApprove(stakingTokenContract, sousId)
   const { onStake } = useSousStake(sousId, isBnbPool)
   const { onUnstake } = useSousUnstake(sousId)
   const { onReward } = useSousHarvest(sousId, isBnbPool)
@@ -122,7 +121,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <Image src={`/images/tokens/${image || stakingToken.symbol}.png`} width={64} height={64} alt={stakingToken.symbol} />
+            <Image
+              src={`/images/tokens/${image || stakingToken.symbol}.png`}
+              width={64}
+              height={64}
+              alt={stakingToken.symbol}
+            />
           </div>
           {account && harvest && !isOldSyrup && (
             <HarvestButton

@@ -55,7 +55,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
 
   return (
     <Modal
-      title='Settings'
+      title="Settings"
       headerBackground="gradients.cardHeader"
       onDismiss={onDismiss}
       style={{ maxWidth: '420px', overflowY: 'auto' }}
@@ -77,7 +77,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
           <Flex alignItems="center">
             <Text>Expert Mode</Text>
             <QuestionHelper
-              text='Bypasses confirmation modals and allows high slippage trades. Use at your own risk.'
+              text="Bypasses confirmation modals and allows high slippage trades. Use at your own risk."
               placement="top-start"
               ml="4px"
             />
@@ -87,7 +87,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
         <Flex justifyContent="space-between" alignItems="center" mb="24px">
           <Flex alignItems="center">
             <Text>Disable Multihops</Text>
-            <QuestionHelper text='Restricts swaps to direct pairs only.' placement="top-start" ml="4px" />
+            <QuestionHelper text="Restricts swaps to direct pairs only." placement="top-start" ml="4px" />
           </Flex>
           <Toggle
             id="toggle-disable-multihop-button"
@@ -102,7 +102,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
           <Flex alignItems="center">
             <Text>Flippy sounds</Text>
             <QuestionHelper
-              text='Fun sounds to make a truly immersive pancake-flipping trading experience'
+              text="Fun sounds to make a truly immersive pancake-flipping trading experience"
               placement="top-start"
               ml="4px"
             />

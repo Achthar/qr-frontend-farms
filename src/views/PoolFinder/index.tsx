@@ -33,7 +33,9 @@ const StyledButton = styled(Button)`
 
 export default function PoolFinder() {
   const { account } = useActiveWeb3React()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   const [activeField, setActiveField] = useState<number>(Fields.TOKEN1)
   const [currency0, setCurrency0] = useState<Currency | null>(ETHER)
@@ -77,7 +79,7 @@ export default function PoolFinder() {
       </Text>
     </LightCard>
   )
-  
+
   const [onPresentCurrencyModal] = useModal(
     <CurrencySearchModal
       onCurrencySelect={handleCurrencySelect}
@@ -86,7 +88,6 @@ export default function PoolFinder() {
       // error fix from here
       onDismiss={() => null}
       otherSelectedCurrency={null}
-
     />,
     true,
     true,
@@ -107,7 +108,7 @@ export default function PoolFinder() {
           >
             {currency0 ? (
               <Row>
-                <CurrencyLogo currency={currency0} size='24px' style={{ marginRight: '1px' }}/>
+                <CurrencyLogo currency={currency0} size="24px" style={{ marginRight: '1px' }} />
                 <Text ml="8px">{currency0.symbol}</Text>
               </Row>
             ) : (
@@ -128,7 +129,7 @@ export default function PoolFinder() {
           >
             {currency1 ? (
               <Row>
-                <CurrencyLogo currency={currency1} size = '24px' style={{ marginRight: '1px' }}/>
+                <CurrencyLogo currency={currency1} size="24px" style={{ marginRight: '1px' }} />
                 <Text ml="8px">{currency1.symbol}</Text>
               </Row>
             ) : (
@@ -150,7 +151,7 @@ export default function PoolFinder() {
           {currency0 && currency1 ? (
             pairState === PairState.EXISTS ? (
               hasPosition && pair ? (
-                <MinimalPositionCard pair={pair} showUnwrapped={false}/>
+                <MinimalPositionCard pair={pair} showUnwrapped={false} />
               ) : (
                 <LightCard padding="45px 10px">
                   <AutoColumn gap="sm" justify="center">

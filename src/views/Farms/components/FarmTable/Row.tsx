@@ -73,7 +73,9 @@ const Row: React.FunctionComponent<RowPropsWithLoading> = (props) => {
   const hasStakedAmount = !!useFarmUser(details.pid).stakedBalance.toNumber()
   const [actionPanelExpanded, setActionPanelExpanded] = useState(hasStakedAmount)
   const shouldRenderChild = useDelayedUnmount(actionPanelExpanded, 300)
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   const toggleActionPanel = () => {
     setActionPanelExpanded(!actionPanelExpanded)

@@ -19,7 +19,7 @@ interface MulticallOptions {
 
 const multicall = async (abi: any[], calls: Call[]) => {
   const web3 = getWeb3()
-  const multi = new web3.eth.Contract((MultiCallAbi as unknown) as AbiItem, getMulticallAddress())
+  const multi = new web3.eth.Contract(MultiCallAbi as unknown as AbiItem, getMulticallAddress())
   const itf = new Interface(abi)
 
   const calldata = calls.map((call) => [call.address.toLowerCase(), itf.encodeFunctionData(call.name, call.params)])
@@ -35,7 +35,7 @@ const multicall = async (abi: any[], calls: Call[]) => {
  * 1. If "requireSuccess" is false multicall will not bail out if one of the calls fails
  * 2. The return includes a boolean whether the call was successful e.g. [wasSuccessful, callResult]
  */
- export const multicallv2 = async <T = any>(
+export const multicallv2 = async <T = any>(
   abi: any[],
   calls: Call[],
   options: MulticallOptions = { requireSuccess: true },
@@ -53,6 +53,5 @@ const multicall = async (abi: any[], calls: Call[]) => {
 
   return res
 }
-
 
 export default multicall

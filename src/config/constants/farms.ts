@@ -14,7 +14,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.syrup,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 251,
@@ -25,7 +24,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.cake,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 252,
@@ -36,7 +34,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.busd,
     quoteToken: tokens.wbnb,
-
   },
   /**
    * V3 by order of release (some may be out of PID order due to multiplier boost)
@@ -50,7 +47,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.bel,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 446,
@@ -62,7 +58,6 @@ export const farms: FarmConfig[] = [
     token: tokens.bmon,
     quoteToken: tokens.busd,
     isCommunity: true,
-
   },
   {
     pid: 447,
@@ -74,7 +69,6 @@ export const farms: FarmConfig[] = [
     token: tokens.gnt,
     quoteToken: tokens.wbnb,
     isCommunity: true,
-
   },
   {
     pid: 450,
@@ -86,7 +80,6 @@ export const farms: FarmConfig[] = [
     token: tokens.sfund,
     quoteToken: tokens.wbnb,
     isCommunity: true,
-
   },
   {
     pid: 448,
@@ -98,7 +91,6 @@ export const farms: FarmConfig[] = [
     token: tokens.rusd,
     quoteToken: tokens.busd,
     isCommunity: true,
-
   },
   {
     pid: 449,
@@ -110,7 +102,6 @@ export const farms: FarmConfig[] = [
     token: tokens.bp,
     quoteToken: tokens.wbnb,
     isCommunity: true,
-
   },
   {
     pid: 317,
@@ -121,8 +112,7 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.ramp,
     quoteToken: tokens.busd,
-
-  }, /*
+  } /*
   {
     pid: 445,
     lpSymbol: 'POTS-BUSD LP',
@@ -2020,7 +2010,7 @@ export const farms: FarmConfig[] = [
   },
   /**
    * V2 farms, set to be removed once unstaked
-   */
+   */,
   /*
   {
     pid: 139,
@@ -4345,7 +4335,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.inj,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 29,
@@ -4356,7 +4345,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.usdc,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 30,
@@ -4367,7 +4355,6 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.sxp,
     quoteToken: tokens.wbnb,
-
   },
   {
     pid: 32,
@@ -4378,8 +4365,7 @@ export const farms: FarmConfig[] = [
     },
     token: tokens.ctk,
     quoteToken: tokens.wbnb,
-
-  }, /*
+  } /*
   {
     pid: 34,
     lpSymbol: 'STAX-CAKE LP',
@@ -4459,9 +4445,9 @@ export const farms: FarmConfig[] = [
     token: tokens.bake,
     quoteToken: tokens.wbnb,
 
-  }, */
+  }, */,
 ]
 
 export const communityFarms: FarmConfig[] = []
 
-export { farms as farmsConfig } 
+export { farms as farmsConfig }

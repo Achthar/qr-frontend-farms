@@ -4,14 +4,12 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { useFetchPublicData } from 'state/hooks'
 import styled from 'styled-components'
-import { ResetCSS } from '@pantherswap-libs/uikit'
+import { ResetCSS } from '@pancakeswap-libs/uikit'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import Pools from './views/Pools'
 import PageLoader from './components/PageLoader'
 import NftGlobalNotification from './views/Nft/components/NftGlobalNotification'
-
-import { ThemeContext, ThemeContextProvider } from './ThemeContext'
 
 import Swap from './views/Swap'
 import {
@@ -51,7 +49,6 @@ BigNumber.config({
   EXPONENTIAL_AT: 1000,
   DECIMAL_PLACES: 80,
 })
-
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -93,65 +90,63 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <ResetCSS  />
+      <ResetCSS />
       <GlobalStyle />
-      <ThemeContextProvider>
-      <Menu >
+      <Menu>
         <BodyWrapper>
-        <Suspense fallback={<PageLoader />}>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/liquidity-rewards">
-              <FarmsLite />
-            </Route>
-            <Route path="/pools">
-              { /* <Pools/> */}
-              <FarmsLite tokenMode/>
-            </Route>
-                        {/* Using this format because these components use routes injected props. We need to rework them with hooks */}
-                        <Route exact strict path="/swap" component={Swap} />
-            <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-            <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-            <Route exact strict path="/find" component={PoolFinder} />
-            <Route exact strict path="/liquidity" component={Liquidity} />
-            <Route exact strict path="/create" component={RedirectToAddLiquidity} />
-            <Route exact path="/add" component={AddLiquidity} />
-            <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-            <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-            <Route exact path="/create" component={AddLiquidity} />
-            <Route exact path="/create/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
-            <Route exact path="/create/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
-            <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-            <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+          <Suspense fallback={<PageLoader />}>
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/liquidity-rewards">
+                <FarmsLite />
+              </Route>
+              <Route path="/pools">
+                {/* <Pools/> */}
+                <FarmsLite tokenMode />
+              </Route>
+              {/* Using this format because these components use routes injected props. We need to rework them with hooks */}
+              <Route exact strict path="/swap" component={Swap} />
+              <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+              <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
+              <Route exact strict path="/find" component={PoolFinder} />
+              <Route exact strict path="/liquidity" component={Liquidity} />
+              <Route exact strict path="/create" component={RedirectToAddLiquidity} />
+              <Route exact path="/add" component={AddLiquidity} />
+              <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+              <Route exact path="/add/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+              <Route exact path="/create" component={AddLiquidity} />
+              <Route exact path="/create/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
+              <Route exact path="/create/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
+              <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
+              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
 
-            {/* <Route path="/pools"> */}
-            {/*  <Pools /> */}
-            {/* </Route> */}
-            {/* <Route path="/lottery"> */}
-            {/*  <Lottery /> */}
-            {/* </Route> */}
-            {/* <Route path="/ifo"> */}
-            {/*  <Ifos /> */}
-            {/* </Route> */}
-            {/* <Route path="/nft"> */}
-            {/*  <Nft /> */}
-            {/* </Route> */}
-            {/* Redirect */}
-            {/* <Route path="/staking"> */}
-            {/*  <Redirect to="/pools" /> */}
-            {/* </Route> */}
-            {/* <Route path="/syrup"> */}
-            {/*  <Redirect to="/pools" /> */}
-            {/* </Route> */}
-            {/* 404 */}
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
+              {/* <Route path="/pools"> */}
+              {/*  <Pools /> */}
+              {/* </Route> */}
+              {/* <Route path="/lottery"> */}
+              {/*  <Lottery /> */}
+              {/* </Route> */}
+              {/* <Route path="/ifo"> */}
+              {/*  <Ifos /> */}
+              {/* </Route> */}
+              {/* <Route path="/nft"> */}
+              {/*  <Nft /> */}
+              {/* </Route> */}
+              {/* Redirect */}
+              {/* <Route path="/staking"> */}
+              {/*  <Redirect to="/pools" /> */}
+              {/* </Route> */}
+              {/* <Route path="/syrup"> */}
+              {/*  <Redirect to="/pools" /> */}
+              {/* </Route> */}
+              {/* 404 */}
+              <Route component={NotFound} />
+            </Switch>
+          </Suspense>
         </BodyWrapper>
       </Menu>
-      </ThemeContextProvider>
       <NftGlobalNotification />
     </Router>
   )

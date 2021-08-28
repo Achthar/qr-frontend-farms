@@ -116,7 +116,7 @@ export default function CurrencySearchModal({
         ) : (
           ''
         )}
-       
+
         {modalView === CurrencyModalView.search && (
           <Footer>
             <Button
@@ -129,7 +129,6 @@ export default function CurrencySearchModal({
             </Button>
           </Footer>
         )}
-        
       </StyledModalBody>
     </StyledModalContainer>
   )

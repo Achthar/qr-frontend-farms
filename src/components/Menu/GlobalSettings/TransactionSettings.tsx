@@ -76,7 +76,7 @@ const SlippageTabs = () => {
         <Flex mb="12px">
           <Text>Slippage Tolerance</Text>
           <QuestionHelper
-            text='Setting a high slippage tolerance can help transactions succeed, but you may not get such a good price. Use with caution.'
+            text="Setting a high slippage tolerance can help transactions succeed, but you may not get such a good price. Use with caution."
             placement="top-start"
             ml="4px"
           />
@@ -151,7 +151,7 @@ const SlippageTabs = () => {
         <Flex alignItems="center">
           <Text>Tx deadline (mins)</Text>
           <QuestionHelper
-            text='Your transaction will revert if it is left confirming for longer than this time.'
+            text="Your transaction will revert if it is left confirming for longer than this time."
             placement="top-start"
             ml="4px"
           />

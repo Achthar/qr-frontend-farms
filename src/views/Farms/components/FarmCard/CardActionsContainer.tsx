@@ -29,7 +29,9 @@ interface FarmCardActionsProps {
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidityUrl, cakePrice, lpLabel }) => {
-    function  t(x ){return x;}
+  function t(x) {
+    return x
+  }
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = farm
   const {

@@ -45,7 +45,9 @@ interface FarmCardProps {
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePrice, account }) => {
-    function  t(x ){return x;}
+  function t(x) {
+    return x
+  }
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
 

@@ -30,7 +30,8 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
     <AutoColumn gap="lg">
       <Message variant="warning">
         <Text>
-          Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.
+          Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and
+          tokens that claim to represent projects that do not have a token.
           <br />
           <br />
           If you purchase an arbitrary token, you may be unable to sell it back.
@@ -49,7 +50,11 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
                 variant="success"
                 outline
                 scale="sm"
-                startIcon={list.logoURI && <ListLogo logoURI={list.logoURI} size="12px" style={{ marginRight: '1px' }} alt="alt text"/>}
+                startIcon={
+                  list.logoURI && (
+                    <ListLogo logoURI={list.logoURI} size="12px" style={{ marginRight: '1px' }} alt="alt text" />
+                  )
+                }
               >
                 via {list.name}
               </Tag>

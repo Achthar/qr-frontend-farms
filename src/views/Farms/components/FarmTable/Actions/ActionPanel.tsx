@@ -140,7 +140,9 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
 }) => {
   const farm = details
 
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const isActive = farm.multiplier !== '0X'
   const { quoteToken, token, dual } = farm
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
@@ -158,9 +160,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
       <InfoContainer>
         {isActive && (
           <StakeContainer>
-            <StyledLinkExternal href={`/add/${liquidityUrlPathParts}`}>
-              {t(`Get ${lpLabel}`)}
-            </StyledLinkExternal>
+            <StyledLinkExternal href={`/add/${liquidityUrlPathParts}`}>{t(`Get ${lpLabel}`)}</StyledLinkExternal>
           </StakeContainer>
         )}
         <StyledLinkExternal href={bsc}>{t('View Contract')}</StyledLinkExternal>

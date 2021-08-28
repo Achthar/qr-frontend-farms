@@ -81,8 +81,9 @@ const ConfirmSwapModal: React.FC<InjectedModalProps & ConfirmSwapModalProps> = (
   }, [allowedSlippage, onConfirm, showAcceptChanges, swapErrorMessage, trade])
 
   // text to show while loading
-  const pendingText = `Swapping ${trade?.inputAmount?.toSignificant(6) ?? ''} ${trade?.inputAmount?.currency?.symbol ?? ''} for ${trade?.outputAmount?.toSignificant(6) ?? ''} ${trade?.outputAmount?.currency?.symbol ?? ''}`
-  
+  const pendingText = `Swapping ${trade?.inputAmount?.toSignificant(6) ?? ''} ${
+    trade?.inputAmount?.currency?.symbol ?? ''
+  } for ${trade?.outputAmount?.toSignificant(6) ?? ''} ${trade?.outputAmount?.currency?.symbol ?? ''}`
 
   const confirmationContent = useCallback(
     () =>
@@ -96,7 +97,7 @@ const ConfirmSwapModal: React.FC<InjectedModalProps & ConfirmSwapModalProps> = (
 
   return (
     <TransactionConfirmationModal
-      title='Confirm Swap'
+      title="Confirm Swap"
       onDismiss={onDismiss}
       customOnDismiss={customOnDismiss}
       attemptingTxn={attemptingTxn}

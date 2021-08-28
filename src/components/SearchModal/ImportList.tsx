@@ -69,7 +69,9 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
           <Card padding="12px 20px">
             <RowBetween>
               <RowFixed>
-                {list.logoURI && <ListLogo logoURI={list.logoURI} size="40px" style={{ padding: '1px' }} alt="alt logo"/>}
+                {list.logoURI && (
+                  <ListLogo logoURI={list.logoURI} size="40px" style={{ padding: '1px' }} alt="alt logo" />
+                )}
                 <AutoColumn gap="sm" style={{ marginLeft: '20px' }}>
                   <RowFixed>
                     <Text bold mr="6px">
@@ -100,7 +102,9 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
                 Import at your own risk
               </Text>
               <Text color={theme.colors.failure} mb="8px">
-                By adding this list you are implicitly trusting that the data is correct. Anyone can create a list, including creating fake versions of existing lists and lists that claim to represent projects that do not have one.
+                By adding this list you are implicitly trusting that the data is correct. Anyone can create a list,
+                including creating fake versions of existing lists and lists that claim to represent projects that do
+                not have one.
               </Text>
               <Text bold color={theme.colors.failure} mb="16px">
                 {typeof 'If you purchase a token from this list, you may not be able to sell it back.'}

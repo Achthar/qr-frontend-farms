@@ -27,7 +27,9 @@ const SearchInput: React.FC<Props> = ({ onChange: onChangeCallback, placeholder 
   const [toggled, setToggled] = useState(false)
   const [searchText, setSearchText] = useState('')
 
-    function  t(x ){return x;}
+  function t(x) {
+    return x
+  }
 
   const debouncedOnChange = useMemo(
     () => debounce((e: React.ChangeEvent<HTMLInputElement>) => onChangeCallback(e), 500),

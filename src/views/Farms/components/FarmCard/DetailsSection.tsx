@@ -28,7 +28,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   addLiquidityUrl,
 }) => {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   return (
     <Wrapper>
@@ -36,9 +38,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <Text>{t('Total Liquidity')}:</Text>
         {totalValueFormatted ? <Text>{totalValueFormatted}</Text> : <Skeleton width={75} height={25} />}
       </Flex>
-      {!removed && (
-        <StyledLinkExternal href={addLiquidityUrl}>{t(`Get ${lpLabel}`)}</StyledLinkExternal>
-      )}
+      {!removed && <StyledLinkExternal href={addLiquidityUrl}>{t(`Get ${lpLabel}`)}</StyledLinkExternal>}
       <StyledLinkExternal href={bscScanAddress}>{t('View Contract')}</StyledLinkExternal>
       <StyledLinkExternal href={infoAddress}>{t('See Pair Info')}</StyledLinkExternal>
     </Wrapper>

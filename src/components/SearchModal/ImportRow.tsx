@@ -79,7 +79,7 @@ export default function ImportRow({
             <Text small mr="4px" color="textSubtle">
               via {list.name}
             </Text>
-            <ListLogo logoURI={list.logoURI} size="12px" alt="alt text" style={{ marginRight: '1px' }}/>
+            <ListLogo logoURI={list.logoURI} size="12px" alt="alt text" style={{ marginRight: '1px' }} />
           </RowFixed>
         )}
       </AutoColumn>

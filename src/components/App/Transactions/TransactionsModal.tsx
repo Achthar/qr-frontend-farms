@@ -45,7 +45,7 @@ const TransactionsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
   }, [dispatch, chainId])
 
   return (
-    <Modal title='Recent Transactions' headerBackground="gradients.cardHeader" onDismiss={onDismiss}>
+    <Modal title="Recent Transactions" headerBackground="gradients.cardHeader" onDismiss={onDismiss}>
       {account && (
         <ModalBody>
           {!!pending.length || !!confirmed.length ? (

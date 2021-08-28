@@ -15,11 +15,14 @@ import Page from '../Page'
 
 const Body = styled(CardBody)`
   background-color: ${({ theme }) => theme.colors.primaryBright};
-// dropdown color`
+  // dropdown color
+`
 
 export default function Pool() {
   const { account } = useActiveWeb3React()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   // fetch the user's balances of all tracked V2 LP tokens
   const trackedTokenPairs = useTrackedTokenPairs()

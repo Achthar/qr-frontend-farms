@@ -37,7 +37,9 @@ const ApyButton: React.FC<ApyButtonProps> = ({
   displayApr,
   addLiquidityUrl,
 }) => {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const lpPrice = useLpTokenPrice(lpSymbol)
   const { tokenBalance, stakedBalance } = useFarmUser(pid)
   const [onPresentApyModal] = useModal(

@@ -36,8 +36,8 @@ const IfoCardContribute: React.FC<Props> = ({
 
   const { account } = useWallet()
   const contractRaisingToken = useERC20(currencyAddress)
-  const allowance = null; // useIfoAllowance(contractRaisingToken, address, pendingTx)
-  const onApprove = null; // useIfoApprove(contractRaisingToken, address)
+  const allowance = null // useIfoAllowance(contractRaisingToken, address, pendingTx)
+  const onApprove = null // useIfoApprove(contractRaisingToken, address)
   const [onPresentContributeModal] = useModal(
     <ContributeModal currency={currency} contract={contract} currencyAddress={currencyAddress} />,
   )

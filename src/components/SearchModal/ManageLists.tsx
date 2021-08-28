@@ -242,7 +242,7 @@ function ManageLists({
           <Input
             id="list-add-input"
             scale="lg"
-            placeholder='https:// or ipfs:// or ENS name'
+            placeholder="https:// or ipfs:// or ENS name"
             value={listUrlInput}
             onChange={handleInput}
           />
@@ -258,7 +258,9 @@ function ManageLists({
           <Card padding="12px 20px">
             <RowBetween>
               <RowFixed>
-                {tempList.logoURI && <ListLogo logoURI={tempList.logoURI} size="40px" style={{ padding: '1px' }} alt="alt image"/>}
+                {tempList.logoURI && (
+                  <ListLogo logoURI={tempList.logoURI} size="40px" style={{ padding: '1px' }} alt="alt image" />
+                )}
                 <AutoColumn gap="4px" style={{ marginLeft: '20px' }}>
                   <Text bold>{tempList.name}</Text>
                   <Text color="textSubtle" small textTransform="lowercase">

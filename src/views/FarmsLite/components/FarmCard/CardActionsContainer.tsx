@@ -31,15 +31,15 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const { pid, lpAddresses } = useFarmFromPid(farm.pid)
   const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const lpAddress = lpAddresses[process.env.REACT_APP_CHAIN_ID]
-  const tokenAddress = farm.token.address[process.env.REACT_APP_CHAIN_ID];
+  const tokenAddress = farm.token.address[process.env.REACT_APP_CHAIN_ID]
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
 
   const lpContract = useMemo(() => {
-    if(pid===0){
-      return getContract(ethereum as provider, tokenAddress);
+    if (pid === 0) {
+      return getContract(ethereum as provider, tokenAddress)
     }
-    return getContract(ethereum as provider, lpAddress);
+    return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress, tokenAddress, pid])
 
   const { onApprove } = useApprove(lpContract)
@@ -56,7 +56,13 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
 
   const renderApprovalOrStakeButton = () => {
     return isApproved ? (
-      <StakeAction stakedBalance={stakedBalance} tokenBalance={tokenBalance} tokenName={lpName} pid={pid} depositFeeBP={0} />
+      <StakeAction
+        stakedBalance={stakedBalance}
+        tokenBalance={tokenBalance}
+        tokenName={lpName}
+        pid={pid}
+        depositFeeBP={0}
+      />
     ) : (
       <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove}>
         {TranslateString(999, 'Approve Contract')}

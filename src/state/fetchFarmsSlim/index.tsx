@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit'
-import {farmsConfig} from '../../config/constants/farms'
+import { farmsConfig } from '../../config/constants/farms'
 import fetchFarms from './fetchFarms'
 import {
   fetchFarmUserEarnings,
@@ -10,7 +10,7 @@ import {
 } from './fetchFarmUser'
 import { FarmsState, Farm } from '../types'
 
-const initialState: FarmsState = { data: [...farmsConfig], loadArchivedFarmsData:false, userDataLoaded:false }
+const initialState: FarmsState = { data: [...farmsConfig], loadArchivedFarmsData: false, userDataLoaded: false }
 
 export const farmsSlice = createSlice({
   name: 'Farms',

@@ -27,7 +27,7 @@ import {
   getFarmAuctionContract,
   getBunnySpecialLotteryContract,
 } from 'utils/contractHelpers'
-import { getMulticallAddress, getLotteryTicketAddress} from 'utils/addressHelpers'
+import { getMulticallAddress, getLotteryTicketAddress } from 'utils/addressHelpers'
 import pancakeRabbits from 'config/abi/pancakeRabbits.json'
 import rabbitmintingfarm from 'config/abi/rabbitmintingfarm.json'
 import lottery from 'config/abi/lottery.json'
@@ -241,21 +241,21 @@ export function useMulticallContract(): Contract | null {
 }
 
 export const useLottery = () => {
-  const abi = (lottery as unknown) as AbiItem
+  const abi = lottery as unknown as AbiItem
   return useContract(abi, getLotteryV2Contract())
 }
 
 export const useLotteryTicket = () => {
-  const abi = (lotteryTicket as unknown) as AbiItem
+  const abi = lotteryTicket as unknown as AbiItem
   return useContract(abi, getLotteryTicketAddress())
 }
 
 export const useIfoContract = (address: string) => {
-  const ifoAbi = (ifo as unknown) as AbiItem
+  const ifoAbi = ifo as unknown as AbiItem
   return useContract(ifoAbi, address)
 }
 
 export const useRabbitMintingFarm = (address: string) => {
-  const rabbitMintingFarmAbi = (rabbitmintingfarm as unknown) as AbiItem
+  const rabbitMintingFarmAbi = rabbitmintingfarm as unknown as AbiItem
   return useContract(rabbitMintingFarmAbi, address)
 }

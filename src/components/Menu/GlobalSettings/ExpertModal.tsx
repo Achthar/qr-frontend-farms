@@ -19,7 +19,7 @@ const ExpertModal: React.FC<ExpertModalProps> = ({
 
   return (
     <Modal
-      title='Expert Mode'
+      title="Expert Mode"
       onBack={() => setShowConfirmExpertModal(false)}
       onDismiss={() => setShowConfirmExpertModal(false)}
       headerBackground="gradients.cardHeader"
@@ -27,7 +27,8 @@ const ExpertModal: React.FC<ExpertModalProps> = ({
     >
       <Message variant="warning" mb="24px">
         <Text>
-          Expert mode turns off the Confirm transaction prompt, and allows high slippage trades that often result in bad rates and lost funds.
+          Expert mode turns off the Confirm transaction prompt, and allows high slippage trades that often result in bad
+          rates and lost funds.
         </Text>
       </Message>
       <Text mb="24px">Only use this mode if you know what you’re doing.</Text>

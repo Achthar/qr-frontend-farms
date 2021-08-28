@@ -11,7 +11,9 @@ interface FarmTabButtonsProps {
 const FarmTabButtons: React.FC<FarmTabButtonsProps> = ({ hasStakeInFinishedFarms }) => {
   const { url } = useRouteMatch()
   const location = useLocation()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   let activeIndex
   switch (location.pathname) {

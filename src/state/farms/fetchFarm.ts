@@ -8,7 +8,7 @@ const fetchFarm = async (farm: Farm): Promise<Farm> => {
 }
 
 fetchFarm.defailtProps = {
-  isTokenOnly : false,
-};
+  isTokenOnly: false,
+}
 
 export default fetchFarm

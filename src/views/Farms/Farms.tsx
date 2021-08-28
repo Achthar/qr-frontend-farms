@@ -115,7 +115,9 @@ const getDisplayApr = (cakeRewardsApr?: number, lpRewardsApr?: number) => {
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
   const { pathname } = useLocation()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const { data: farmsLP, userDataLoaded } = useFarms()
   const cakePrice = usePriceCakeBusd()
   const [query, setQuery] = useState('')

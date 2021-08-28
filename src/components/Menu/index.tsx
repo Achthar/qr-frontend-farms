@@ -12,21 +12,18 @@ import { useTranslation } from 'contexts/Localisation'
 
 import config from './config'
 
-
 const Menu = (props) => {
   const { account, connect, reset } = useWallet()
- const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
- //  const { isDark, toggleTheme } = useTheme()
-  // const cakePriceUsd = usePriceCakeBusd()
+  const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
 
-  const textCol ='black';
+  const textCol = 'black'
 
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
   // const { profile } = useProfile()
   // const { currentLanguage, setLanguage } = useTranslation()
 
-/*
+  /*
 const styleX = styled.div`
 background: url('https://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/bar-chart-icon.png');
 background-position: right;
@@ -36,10 +33,9 @@ background-repeat: no-repeat;
 */
 
   return (
-    <UikitMenu 
+    <UikitMenu
       innerProps={{ style: { margin: '0', width: '100%' } }}
-      background= 'radial-gradient(103.12% 50% at 50% 50%, #21193A 0%, #191326 100%)'
-      
+      background="radial-gradient(103.12% 50% at 50% 50%, #21193A 0%, #191326 100%)"
       index={2}
       hasCurvedDivider={false}
       account={account}
@@ -59,4 +55,3 @@ background-repeat: no-repeat;
 }
 
 export default Menu
-

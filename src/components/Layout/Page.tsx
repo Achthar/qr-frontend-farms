@@ -51,7 +51,6 @@ const PageMeta = () => {
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => {
   return (
     <>
- 
       <StyledPage {...props}>{children}</StyledPage>
     </>
   )

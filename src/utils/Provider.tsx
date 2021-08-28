@@ -1,5 +1,5 @@
-const nothing = 1;
-export default  nothing;
+const nothing = 1
+export default nothing
 /*
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { Language } from '@pancakeswap/uikit'

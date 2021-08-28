@@ -3,7 +3,7 @@ import erc20 from 'config/abi/erc20.json'
 import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
 import { getMasterChefAddress } from 'utils/addressHelpers'
-import {farmsConfig} from 'config/constants/farms'
+import { farmsConfig } from 'config/constants/farms'
 import { QuoteToken } from '../../config/constants/types'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
@@ -48,27 +48,21 @@ const fetchFarms = async () => {
         },
       ]
 
-      const [
-        tokenBalanceLP,
-        quoteTokenBlanceLP,
-        lpTokenBalanceMC,
-        lpTotalSupply,
-        tokenDecimals,
-        quoteTokenDecimals
-      ] = await multicall(erc20, calls)
+      const [tokenBalanceLP, quoteTokenBlanceLP, lpTokenBalanceMC, lpTotalSupply, tokenDecimals, quoteTokenDecimals] =
+        await multicall(erc20, calls)
 
-      let tokenAmount;
-      let lpTotalInQuoteToken;
-      let tokenPriceVsQuote;
-      if(farmConfig.pid === 0){
-        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
-        if(farmConfig.token.symbol === QuoteToken.BUSD && farmConfig.quoteToken.symbol === QuoteToken.BUSD){
-          tokenPriceVsQuote = new BigNumber(1);
-        }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+      let tokenAmount
+      let lpTotalInQuoteToken
+      let tokenPriceVsQuote
+      if (farmConfig.pid === 0) {
+        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals))
+        if (farmConfig.token.symbol === QuoteToken.BUSD && farmConfig.quoteToken.symbol === QuoteToken.BUSD) {
+          tokenPriceVsQuote = new BigNumber(1)
+        } else {
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP))
         }
-        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
-      }else{
+        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
+      } else {
         // Ratio in % a LP tokens that are in staking, vs the total number in circulation
         const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
 
@@ -84,10 +78,10 @@ const fetchFarms = async () => {
           .div(new BigNumber(10).pow(quoteTokenDecimals))
           .times(lpTokenRatio)
 
-        if(tokenAmount.comparedTo(0) > 0){
-          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
-        }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+        if (tokenAmount.comparedTo(0) > 0) {
+          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount)
+        } else {
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP))
         }
       }
 

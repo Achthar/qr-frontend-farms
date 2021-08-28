@@ -69,7 +69,6 @@ const ModalInput: React.FC<ModalInputProps> = ({
   inputTitle,
   decimals = 18,
 }) => {
-
   const isBalanceZero = max === '0' || !max
 
   const displayBalance = (balance: string) => {

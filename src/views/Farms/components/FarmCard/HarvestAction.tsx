@@ -20,7 +20,9 @@ interface FarmCardActionsProps {
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
   const { account } = useWeb3React()
   const { toastSuccess, toastError } = useToast()
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvestFarm(pid)
   const cakePrice = usePriceCakeBusd()
@@ -43,10 +45,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
           setPendingTx(true)
           try {
             await onReward()
-            toastSuccess(
-              `${t('Harvested')}!`,
-              t('Your QT earnings have been sent to your wallet!'),
-            )
+            toastSuccess(`${t('Harvested')}!`, t('Your QT earnings have been sent to your wallet!'))
           } catch (e) {
             toastError(
               t('Error'),

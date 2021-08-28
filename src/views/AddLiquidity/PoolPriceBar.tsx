@@ -11,14 +11,16 @@ function PoolPriceBar({
   currencies,
   noLiquidity,
   poolTokenPercentage,
-  price=null,
+  price = null,
 }: {
   currencies: { [field in Field]?: Currency }
   noLiquidity: boolean // ?
   poolTokenPercentage: Percent // ?
   price: Price // ?
 }) {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   return (
     <AutoColumn gap="md">
       <AutoRow justify="space-around" gap="4px">

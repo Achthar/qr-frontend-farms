@@ -124,11 +124,11 @@ export const getCakeVaultContract = (signer?: ethers.Signer | ethers.providers.P
 }
 
 export const getPredictionsContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
-  return null; // getContract(predictionsAbi, getPredictionsAddress(), signer) as PredictionsContract
+  return null // getContract(predictionsAbi, getPredictionsAddress(), signer) as PredictionsContract
 }
 
 export const getChainlinkOracleContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
-  return null; // getContract(chainlinkOracleAbi, getChainlinkOracleAddress(), signer) as ChainLinkOracleContract
+  return null // getContract(chainlinkOracleAbi, getChainlinkOracleAddress(), signer) as ChainLinkOracleContract
 }
 export const getMulticallContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(MultiCallAbi, getMulticallAddress(), signer)
@@ -143,5 +143,5 @@ export const getBunnySpecialLotteryContract = (signer?: ethers.Signer | ethers.p
   return getContract(bunnySpecialLotteryAbi, getBunnySpecialLotteryAddress(), signer)
 }
 export const getFarmAuctionContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
-  return null; // getContract(farmAuctionAbi, getFarmAuctionAddress(), signer) as FarmAuctionContract
+  return null // getContract(farmAuctionAbi, getFarmAuctionAddress(), signer) as FarmAuctionContract
 }

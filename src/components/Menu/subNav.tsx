@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
 
-
 const StyledNav = styled.nav`
   margin-bottom: 40px;
 `
@@ -26,7 +25,7 @@ const Nav = () => {
   const location = useLocation()
   return (
     <StyledNav>
-      <ButtonMenu activeIndex={getActiveIndex(location.pathname)} >
+      <ButtonMenu activeIndex={getActiveIndex(location.pathname)}>
         <ButtonMenuItem id="swap-nav-link" to="/swap" as={Link}>
           Swap
         </ButtonMenuItem>

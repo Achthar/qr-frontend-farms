@@ -36,7 +36,9 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
 
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvestFarm(pid)
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
 
@@ -63,10 +65,7 @@ const HarvestAction: React.FunctionComponent<HarvestActionProps> = ({ pid, userD
             setPendingTx(true)
             try {
               await onReward()
-              toastSuccess(
-                `${t('Harvested')}!`,
-                t('Your QT earnings have been sent to your wallet!'),
-              )
+              toastSuccess(`${t('Harvested')}!`, t('Your QT earnings have been sent to your wallet!'))
             } catch (e) {
               toastError(
                 t('Error'),

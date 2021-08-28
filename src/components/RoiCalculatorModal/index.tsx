@@ -135,7 +135,7 @@ const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
 
   return (
     <StyledModal
-      title='ROI Calculator'
+      title="ROI Calculator"
       onDismiss={onBack || onDismiss}
       onBack={onBack ?? null}
       headerBackground="gradients.cardHeader"

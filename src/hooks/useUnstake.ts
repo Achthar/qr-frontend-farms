@@ -17,9 +17,9 @@ const useUnstake = (pid: number) => {
 
   const handleUnstake = useCallback(
     async (amount: string) => {
-      const pids =null;
+      const pids = null
       const txHash = await unstake(masterChefContract, pid, amount, account)
-      dispatch(fetchFarmUserDataAsync({account, pids}))
+      dispatch(fetchFarmUserDataAsync({ account, pids }))
       console.info(txHash)
     },
     [account, dispatch, masterChefContract, pid],

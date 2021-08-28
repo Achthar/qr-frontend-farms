@@ -126,7 +126,7 @@ function CurrencySearch({
           <Row>
             <Input
               id="token-search-input"
-              placeholder='Search name or paste address'
+              placeholder="Search name or paste address"
               scale="lg"
               autoComplete="off"
               value={searchQuery}
@@ -141,7 +141,13 @@ function CurrencySearch({
         </AutoColumn>
         {searchToken && !searchTokenIsAdded ? (
           <Column style={{ padding: '20px 0', height: '100%' }}>
-            <ImportRow token={searchToken} showImportView={showImportView} setImportToken={setImportToken} style={{ marginRight: '1px' }} dim={false} />
+            <ImportRow
+              token={searchToken}
+              showImportView={showImportView}
+              setImportToken={setImportToken}
+              style={{ marginRight: '1px' }}
+              dim={false}
+            />
           </Column>
         ) : filteredSortedTokens?.length > 0 || filteredInactiveTokens?.length > 0 ? (
           <Box margin="24px -24px">

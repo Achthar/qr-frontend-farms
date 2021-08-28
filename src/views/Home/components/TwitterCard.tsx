@@ -23,7 +23,7 @@ const Row = styled.div`
   justify-content: space-between;
   margin-bottom: 8px;
 `
-const textCol = 'rgba(0, 32, 96, 1)';
+const textCol = 'rgba(0, 32, 96, 1)'
 
 const TwitterCard = () => {
   const TranslateString = useI18n()
@@ -37,12 +37,12 @@ const TwitterCard = () => {
         <Timeline
           dataSource={{
             sourceType: 'profile',
-            screenName: 'binance'
+            screenName: 'binance',
           }}
           options={{
             height: '300',
-            chrome: "noheader, nofooter",
-            width: "400"
+            chrome: 'noheader, nofooter',
+            width: '400',
           }}
         />
       </CardBody>

@@ -30,7 +30,9 @@ const Container = styled.div`
 
 const Multiplier: React.FunctionComponent<MultiplierProps> = ({ multiplier }) => {
   const displayMultiplier = multiplier ? multiplier.toLowerCase() : <Skeleton width={30} />
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const tooltipContent = (
     <>
       <Text>

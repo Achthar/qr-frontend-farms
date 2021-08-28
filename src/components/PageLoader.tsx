@@ -11,9 +11,8 @@ const Wrapper = styled(Page)`
 
 const LogoLoad = styled.img`
   margin-bottom: 16px;
-  opacity: 0.7
+  opacity: 0.7;
 `
-
 
 /* <Wrapper>
       <Spinner />
@@ -21,7 +20,7 @@ const LogoLoad = styled.img`
 const PageLoader: React.FC = () => {
   return (
     <Wrapper>
-      <LogoLoad src="https://quantresurgencemhy2069p5074.s3.eu-west-2.amazonaws.com/logos/QRLogo.png"/>
+      <LogoLoad src="https://quantresurgencemhy2069p5074.s3.eu-west-2.amazonaws.com/logos/QRLogo.png" />
     </Wrapper>
   )
 }

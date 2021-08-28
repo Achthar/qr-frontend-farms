@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit'
 import isArchivedPid from 'utils/farmHelpers'
-import {farmsConfig} from 'config/constants/farms'
+import { farmsConfig } from 'config/constants/farms'
 import fetchFarms from './fetchFarms'
 
 import {
@@ -11,7 +11,6 @@ import {
   fetchFarmUserStakedBalances,
 } from './fetchFarmUser'
 import { FarmsState, Farm } from '../types'
-
 
 export const nonArchivedFarms = farmsConfig.filter(({ pid }) => !isArchivedPid(pid))
 

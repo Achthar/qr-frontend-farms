@@ -54,7 +54,11 @@ const Apr: React.FC<AprProps> = ({
   originalValue,
   hideButton = false,
 }) => {
-  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAddresses: quoteTokenAddress, quoteTokenSymbol:lpSymbol, tokenAddresses: tokenAddress })
+  const liquidityUrlPathParts = getLiquidityUrlPathParts({
+    quoteTokenAddresses: quoteTokenAddress,
+    quoteTokenSymbol: lpSymbol,
+    tokenAddresses: tokenAddress,
+  })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
 
   return originalValue !== 0 ? (

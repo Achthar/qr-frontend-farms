@@ -84,7 +84,7 @@ function CurrencyRow({
       disabled={isSelected}
       selected={otherSelected}
     >
-      <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '1px' }}/>
+      <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '1px' }} />
       <Column>
         <Text bold>{currency.symbol}</Text>
         <Text color="textSubtle" small ellipsis maxWidth="200px">
@@ -92,7 +92,7 @@ function CurrencyRow({
         </Text>
       </Column>
       <RowFixed style={{ justifySelf: 'flex-end' }}>
-        {balance ? <Balance balance={balance} /> : account ? <CircleLoader size='1px' stroke="default"/> : null}
+        {balance ? <Balance balance={balance} /> : account ? <CircleLoader size="1px" stroke="default" /> : null}
       </RowFixed>
     </MenuItem>
   )

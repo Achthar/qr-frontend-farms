@@ -25,7 +25,6 @@ const StyledFarmStakingCard = styled(Card)`
   min-height: 16px;
 `
 
-
 const Block = styled.div`
   margin-bottom: 16px;
   width: 200px;
@@ -78,7 +77,7 @@ const FarmedStakingCard = () => {
     }
   }, [onReward])
 
-const headerCol = 'rgba(0, 32, 96, 1)';
+  const headerCol = 'rgba(0, 32, 96, 1)'
 
   return (
     <StyledFarmStakingCard>
@@ -87,18 +86,23 @@ const headerCol = 'rgba(0, 32, 96, 1)';
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <ChartImageArea>
-        <CardImage src="https://quantresurgencemhy2069p5074.s3.eu-west-2.amazonaws.com/logos/QR_reduced.png" alt="QR logo" width={64} height={64}/>
-        <Block>
-          <Label>QT to Harvest</Label>
-          <CakeHarvestBalance earningsSum={earningsSum}/>
-          <Label >~${(eggPrice * earningsSum).toFixed(2)}</Label>
-        </Block>
-        <Block>
-          <Label> QT in Wallet</Label>
-          <CakeWalletBalance cakeBalance={cakeBalance} />
-          <Label >~${(eggPrice * cakeBalance).toFixed(2)}</Label>
-        </Block>
-      </ChartImageArea>
+          <CardImage
+            src="https://quantresurgencemhy2069p5074.s3.eu-west-2.amazonaws.com/logos/QR_reduced.png"
+            alt="QR logo"
+            width={64}
+            height={64}
+          />
+          <Block>
+            <Label>QT to Harvest</Label>
+            <CakeHarvestBalance earningsSum={earningsSum} />
+            <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
+          </Block>
+          <Block>
+            <Label> QT in Wallet</Label>
+            <CakeWalletBalance cakeBalance={cakeBalance} />
+            <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
+          </Block>
+        </ChartImageArea>
 
         <Actions>
           {account ? (

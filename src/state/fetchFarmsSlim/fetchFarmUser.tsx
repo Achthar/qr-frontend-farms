@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js'
 import erc20ABI from 'config/abi/erc20.json'
 import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
-import {farmsConfig} from 'config/constants/farms'
+import { farmsConfig } from 'config/constants/farms'
 import { getMasterChefAddress } from 'utils/addressHelpers'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
@@ -24,7 +24,7 @@ export const fetchFarmUserAllowances = async (account: string) => {
 
 export const fetchFarmUserTokenBalances = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
-    const lpContractAddress = farm.pid===0 ? farm.token.address[CHAIN_ID] : farm.lpAddresses[CHAIN_ID]
+    const lpContractAddress = farm.pid === 0 ? farm.token.address[CHAIN_ID] : farm.lpAddresses[CHAIN_ID]
     return {
       address: lpContractAddress,
       name: 'balanceOf',

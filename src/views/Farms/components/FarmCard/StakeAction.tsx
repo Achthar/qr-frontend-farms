@@ -47,7 +47,9 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   cakePrice,
   lpLabel,
 }) => {
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
 
   const { onStake } = useStakeFarms(pid)
   const { onUnstake } = useUnstakeFarms(pid)

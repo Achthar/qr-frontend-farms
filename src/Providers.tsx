@@ -11,16 +11,16 @@ import { RefreshContextProvider } from 'contexts/RefreshContext'
 import store from 'state'
 import { ToastsProvider } from 'contexts/ToastsContext'
 
-
 const Providers: React.FC = ({ children }) => {
   const rpcUrl = getRpcUrl()
-  const chainId = parseInt(process.env.REACT_APP_CHAIN_ID);
+  const chainId = parseInt(process.env.REACT_APP_CHAIN_ID)
   return (
     <Provider store={store}>
       <ThemeContextProvider>
-       {// <LanguageContextProvider>
-       }
-       <ToastsProvider>
+        {
+          // <LanguageContextProvider>
+        }
+        <ToastsProvider>
           <bsc.UseWalletProvider
             chainId={chainId}
             connectors={{
@@ -28,15 +28,16 @@ const Providers: React.FC = ({ children }) => {
               bsc,
             }}
           >
-           <BlockContextProvider>
+            <BlockContextProvider>
               <RefreshContextProvider>
-              <ModalProvider>{children}</ModalProvider> 
-              </RefreshContextProvider> 
-           </BlockContextProvider> 
+                <ModalProvider>{children}</ModalProvider>
+              </RefreshContextProvider>
+            </BlockContextProvider>
           </bsc.UseWalletProvider>
-          </ToastsProvider>
-       {// </LanguageContextProvider>
-       }
+        </ToastsProvider>
+        {
+          // </LanguageContextProvider>
+        }
       </ThemeContextProvider>
     </Provider>
   )

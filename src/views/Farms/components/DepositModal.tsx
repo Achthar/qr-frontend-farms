@@ -54,7 +54,9 @@ const DepositModal: React.FC<DepositModalProps> = ({
   const { toastSuccess, toastError } = useToast()
   const [pendingTx, setPendingTx] = useState(false)
   const [showRoiCalculator, setShowRoiCalculator] = useState(false)
-  function t(x){return x;}
+  function t(x) {
+    return x
+  }
   const fullBalance = useMemo(() => {
     return getFullDisplayBalance(max)
   }, [max])

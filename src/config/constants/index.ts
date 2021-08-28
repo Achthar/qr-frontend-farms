@@ -88,9 +88,8 @@ export const BLOCKED_ADDRESSES: string[] = [
   '0x8576aCC5C05D6Ce88f4e49bf65BdF0C62F91353C',
 ]
 
-export {farmsConfig} from './farms'
+export { farmsConfig } from './farms'
 export { default as poolsConfig } from './pools'
 export { default as ifosConfig } from './ifo'
 
-
-export const RABBIT_MINTING_FARM_ADDRESS = '';
+export const RABBIT_MINTING_FARM_ADDRESS = ''

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Contract } from 'web3-eth-contract'
-import { useCake , useLotteryV2Contract } from './useContract'
+import { useCake, useLotteryV2Contract } from './useContract'
 import { getAllowance } from '../utils/erc20'
 // import { getAllowance } from '../utils/contractHelpers'
 
@@ -15,7 +15,7 @@ export const useLotteryAllowance = () => {
 
   useEffect(() => {
     const fetchAllowance = async () => {
-      const res = null; // await getAllowance(cakeContract, lotteryContract, account)
+      const res = null // await getAllowance(cakeContract, lotteryContract, account)
       setAllowance(new BigNumber(res))
     }
 

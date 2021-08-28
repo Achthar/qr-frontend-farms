@@ -10,14 +10,14 @@ import { useMasterchef, useCake, useSousChef, useLotteryV2Contract } from './use
 // Approve a Farm
 export const useApprove = (lpContract: Contract) => {
   const dispatch = useDispatch()
-  const { account }: { account: string} = useWallet()
+  const { account }: { account: string } = useWallet()
   const masterChefContract = useMasterchef()
 
   const handleApprove = useCallback(async () => {
     try {
       const tx = await approve(lpContract, masterChefContract, account)
-      const pids = null;
-      dispatch(fetchFarmUserDataAsync({account, pids}))
+      const pids = null
+      dispatch(fetchFarmUserDataAsync({ account, pids }))
       return tx
     } catch (e) {
       return false
